@@ -1,0 +1,8 @@
+#! /bin/bash  
+if [ -e "$2" ]
+then 
+	gcc `gnustep-config --objc-flags` -o $1 $2 -lgnustep-base -lobjc
+else
+	echo "没有找到需要编译的文件。"
+fi
+
